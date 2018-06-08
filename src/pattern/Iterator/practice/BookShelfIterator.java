@@ -1,4 +1,4 @@
-package practice.Iterator.challenge;
+package pattern.Iterator.practice;
 
 public class BookShelfIterator implements Iterator {
 

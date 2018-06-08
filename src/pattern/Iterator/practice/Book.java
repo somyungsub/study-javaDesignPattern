@@ -1,4 +1,4 @@
-package practice.Iterator.sample;
+package pattern.Iterator.practice;
 
 public class Book {
     private String name;

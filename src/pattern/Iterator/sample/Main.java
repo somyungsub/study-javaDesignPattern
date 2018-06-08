@@ -1,4 +1,4 @@
-package practice.Iterator.sample;
+package pattern.Iterator.sample;
 
 public class Main {
     public static void main(String args[]) {

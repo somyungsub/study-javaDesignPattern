@@ -1,4 +1,4 @@
-package practice.Iterator.challenge;
+package pattern.Iterator.sample;
 
 public interface Aggregate {
     public abstract Iterator iterator();

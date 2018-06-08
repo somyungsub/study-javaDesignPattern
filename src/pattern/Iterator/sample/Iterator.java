@@ -1,4 +1,4 @@
-package practice.Iterator.sample;
+package pattern.Iterator.sample;
 
 public interface Iterator {
     public abstract boolean hasNext();

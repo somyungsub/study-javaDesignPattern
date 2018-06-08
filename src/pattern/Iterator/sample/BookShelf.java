@@ -1,21 +1,18 @@
-package practice.Iterator.challenge;
-
-import java.util.ArrayList;
-import java.util.List;
+package pattern.Iterator.sample;
 
 public class BookShelf implements Aggregate {
-    List<Book> books;
+    Book[] books;
     private int last = 0;
 
-    public BookShelf() {
-        if (books == null) {
-            books = new ArrayList<>();
-        }
+
+    public BookShelf(int maxSize){
+        books = new Book[maxSize];
     }
 
 
+
     public Book getBook(int index) {
-        return books.get(index);
+        return books[index];
     }
 
 
@@ -24,8 +21,10 @@ public class BookShelf implements Aggregate {
     }
 
     public void appendBook(Book book) {
-        books.add(book);
+//        books.add(book);
+        books[last] = book;
         last++;
+
     }
 
 
