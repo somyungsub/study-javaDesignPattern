@@ -4,29 +4,27 @@ package pattern.prototype.sample;
  * Created by User on 2017-03-28.
  */
 public class UnderlinePen implements Product {
-    private char unchar;
+    private char unChar;
 
-    public UnderlinePen(char unchar) {
-        this.unchar = unchar;
+    public UnderlinePen(char unChar) {
+        this.unChar = unChar;
     }
 
     @Override
     public void use(String s) {
-        System.out.println("\""+s+"\"");
-        System.out.println(" ");
-        for (int i=0;i<s.length();i++){
-            System.out.print(unchar);
+        System.out.println("\"" + s + "\"");
+        for (int i = 0; i < s.length(); i++) {
+            System.out.print(unChar);
         }
         System.out.println(" ");
     }
 
     @Override
-    public Product creaClone() {
-        Product p=null;
-        Object obj=null;
+    public Product createClone() {
+        Product p = null;
         try {
-            p=(Product)clone();
-        }catch (CloneNotSupportedException e){
+            p = (Product) clone();
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
 
         }

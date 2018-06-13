@@ -1,8 +1,6 @@
-package pattern.prototype.sample;
+package pattern.prototype.practice;
 
-/**
- * Created by User on 2017-03-28.
- */
+
 public class Main {
     public static void main(String args[]) {
         Manager manager = new Manager();

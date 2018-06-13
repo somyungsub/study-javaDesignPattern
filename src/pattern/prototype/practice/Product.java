@@ -1,10 +1,8 @@
-package pattern.prototype.sample;
+package pattern.prototype.practice;
 
-/**
- * Created by User on 2017-03-28.
- */
-public abstract class Product2 implements Product {
-    @Override
+public abstract class Product implements Cloneable{
+
+    public abstract void use(String s);
     public Product createClone() {
         Product p = null;
         try {

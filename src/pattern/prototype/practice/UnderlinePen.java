@@ -1,18 +1,15 @@
-package pattern.prototype.sample;
+package pattern.prototype.practice;
 
-/**
- * Created by User on 2017-03-28.
- */
-public class UnderlinePen2 extends Product2 {
+public class UnderlinePen extends Product {
     private char unchar;
 
-    public UnderlinePen2(char unchar) {
+    public UnderlinePen(char unchar) {
         this.unchar = unchar;
     }
 
     @Override
     public void use(String s) {
-        System.out.println("\"" + s + "\"");
+        System.out.print("\"" + s + "\"");
         System.out.println(" ");
         for (int i = 0; i < s.length(); i++) {
             System.out.print(unchar);

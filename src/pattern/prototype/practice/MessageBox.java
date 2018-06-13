@@ -1,9 +1,6 @@
-package pattern.prototype.sample;
+package pattern.prototype.practice;
 
-/**
- * Created by User on 2017-03-28.
- */
-public class MessageBox implements Product {
+public class MessageBox extends Product {
     private char decochar;
 
     public MessageBox(char decochar) {
@@ -21,16 +18,5 @@ public class MessageBox implements Product {
             System.out.print(decochar);
         }
         System.out.println(" ");
-    }
-
-    @Override
-    public Product createClone() {
-        Product p = null;
-        try {
-            p = (Product) clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return p;
     }
 }

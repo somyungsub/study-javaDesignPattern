@@ -1,10 +1,7 @@
-package pattern.prototype.sample;
+package pattern.prototype.practice;
 
 import java.util.HashMap;
 
-/**
- * Created by User on 2017-03-28.
- */
 public class Manager {
     private HashMap showcase = new HashMap();
 
