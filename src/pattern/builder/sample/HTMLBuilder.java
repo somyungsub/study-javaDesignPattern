@@ -20,7 +20,7 @@ public class HTMLBuilder extends Builder{
         }catch (IOException e){
             e.printStackTrace();
         }
-        writer.println("<html><head><titl>"+title+"</title></head><body>");
+        writer.println("<html><head><title>"+title+"</title></head><body>");
         writer.println("<h1>"+title+"</h1>");
     }
 
@@ -43,6 +43,8 @@ public class HTMLBuilder extends Builder{
         writer.println("</body></html>");
         writer.close();
     }
+
+    @Override
     public String getResult(){
         return filename;
     }

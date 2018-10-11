@@ -9,8 +9,9 @@ public class TextBuilder extends Builder{
     @Override
     public void makeTitle(String title) {
         buffer.append("=============================");
-        buffer.append("<"+title+">\n");
-        buffer.append("\n");
+        buffer.append(System.lineSeparator());
+        buffer.append("<"+title+">").append(System.lineSeparator());
+        buffer.append(System.lineSeparator());
     }
 
     @Override
@@ -32,6 +33,7 @@ public class TextBuilder extends Builder{
         buffer.append("=============================");
     }
 
+    @Override
     public String getResult(){
         return buffer.toString();
     }
