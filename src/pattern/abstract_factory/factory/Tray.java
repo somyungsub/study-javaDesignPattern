@@ -1,4 +1,4 @@
-package pattern.abstract_factory.sample.factory;
+package pattern.abstract_factory.factory;
 
 import java.util.ArrayList;
 

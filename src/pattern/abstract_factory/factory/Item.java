@@ -1,4 +1,4 @@
-package pattern.abstract_factory.sample.factory;
+package pattern.abstract_factory.factory;
 
 public abstract class Item {
     protected String caption;   // 목차

@@ -1,9 +1,9 @@
-package pattern.abstract_factory.sample;
+package pattern.abstract_factory;
 
-import pattern.abstract_factory.sample.factory.Link;
-import pattern.abstract_factory.sample.factory.Page;
-import pattern.abstract_factory.sample.factory.Tray;
-import pattern.abstract_factory.sample.factory.Factory;
+import pattern.abstract_factory.factory.Link;
+import pattern.abstract_factory.factory.Page;
+import pattern.abstract_factory.factory.Tray;
+import pattern.abstract_factory.factory.Factory;
 
 import java.util.Scanner;
 
@@ -18,10 +18,11 @@ public class Main {
 
         // Link
         Link joins = factory.createLink("중앙일보", "http://www.joins.com/");
-        Link chosun = factory.createLink("조선일보", "http://www.joins.com/");
+        Link chosun = factory.createLink("조선일보", "http://www.chosun.com/");
 
         Link usYahoo = factory.createLink("Yahoo!", "http://www.yahoo.com/");
         Link krYahoo = factory.createLink("Yahoo!Korea", "http://www.yahoo.co.kr/");
+
         Link excite = factory.createLink("Excite", "http://www.excite.com/");
         Link google = factory.createLink("Google", "http://www.google.com/");
 
@@ -45,7 +46,9 @@ public class Main {
         Page page = factory.createPage("LinkPage", "영진닷컴");
         page.add(trayNews);
         page.add(traySearch);
+        page.add(trayYahoo);
         page.output();
 
     }
+
 }

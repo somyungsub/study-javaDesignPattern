@@ -1,4 +1,4 @@
-package pattern.abstract_factory.sample.factory;
+package pattern.abstract_factory.factory;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -26,5 +26,13 @@ public abstract class Factory {
     public abstract Tray createTray(String caption);
 
     public abstract Page createPage(String title, String author);
+
+    // 연습문제 8-2 (p.161)
+    public Page createYahooPage() {
+        Link yahoo = createLink("Yahoo!", "http://www.yahoo.com/");
+        Page page = createPage("Yahoo!!", "Yahoo!!");
+        page.add(yahoo);
+        return page;
+    }
 
 }
