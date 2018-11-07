@@ -34,5 +34,6 @@ public class Main {
         System.out.println("Total result : ");
         System.out.println(player1.toString());
         System.out.println(player2.toString());
+
     }
 }

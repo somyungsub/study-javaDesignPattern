@@ -16,20 +16,30 @@ public class ProbStrategy implements Strategy {
         random = new Random(seed);
     }
 
+    @Override
     public Hand nextHand() {
         int bet = random.nextInt(getSum(currentHandValue));
         int handValue = 0;
         if (bet < history[currentHandValue][0]) {
-            handValue = 0;
+            handValue = 0;  // 주먹
         } else if (bet < history[currentHandValue][0] + history[currentHandValue][1]) {
-            handValue = 1;
+            handValue = 1;  // 가위
         } else {
-            handValue = 2;
+            handValue = 2;  // 보
         }
-
         prevHandValue = currentHandValue;
         currentHandValue = handValue;
         return Hand.getHand(handValue);
+    }
+
+    @Override
+    public void study(boolean win) {
+        if (win) {
+            history[prevHandValue][currentHandValue]++;
+        } else {
+            history[prevHandValue][(currentHandValue + 1) % 3]++;
+            history[prevHandValue][(currentHandValue + 2) % 3]++;
+        }
     }
 
     private int getSum(int hv) {
@@ -38,14 +48,5 @@ public class ProbStrategy implements Strategy {
             sum += history[hv][i];
         }
         return sum;
-    }
-
-    public void study(boolean win) {
-        if (win) {
-            history[prevHandValue][currentHandValue]++;
-        } else {
-            history[prevHandValue][(currentHandValue + 1) % 3]++;
-            history[prevHandValue][(currentHandValue + 2) % 3]++;
-        }
     }
 }

@@ -21,7 +21,6 @@ public class BookShelf implements Aggregate {
     }
 
     public void appendBook(Book book) {
-//        books.add(book);
         books[last] = book;
         last++;
 
