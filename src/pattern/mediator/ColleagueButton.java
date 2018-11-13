@@ -5,7 +5,7 @@ import java.awt.*;
 public class ColleagueButton extends Button implements Colleague {
     private Mediator mediator;
 
-    public ColleagueButton(String label) throws HeadlessException {
+    public ColleagueButton(String label){
         super(label);
     }
 
