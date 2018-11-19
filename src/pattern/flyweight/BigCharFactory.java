@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BigCharFactory {
-    private Map<String, BigChar> pool;
+    private Map<String, BigChar> pool;  // 관리 : 저장공간
 
-    private static BigCharFactory singleton = new BigCharFactory();
-
+    private static BigCharFactory singleton = new BigCharFactory(); // 팩토리는 싱글턴으로 구현
     private BigCharFactory() {
         pool = new HashMap<>();
     }

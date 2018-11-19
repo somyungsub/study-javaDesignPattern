@@ -18,7 +18,7 @@ public class BigChar {
             while ((line = bf.readLine()) != null) {
                 sb.append(line).append(System.lineSeparator());
             }
-            this.fontData = sb.toString();
+            this.fontData = sb.toString();  // 파일 데이터
             bf.close();
         } catch (IOException e) {
             e.printStackTrace();
