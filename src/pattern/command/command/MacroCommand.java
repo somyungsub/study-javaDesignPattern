@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class MacroCommand implements Command {
 
-  private Stack commands = new Stack();
+  private Stack<Command> commands = new Stack(); // 명령 이력저장
 
 
   // 실행

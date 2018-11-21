@@ -1,4 +1,5 @@
 package pattern.command.drawer;
 
-public class Drawable {
+public interface Drawable {
+    void draw(int x, int y);
 }
