@@ -15,6 +15,8 @@ public class TestMain {
         else
             System.out.println("obj1 != obj2");
 
+        System.out.println(obj1);   // 주소값
+        System.out.println(obj2);   // 주소값
         System.out.println("end");
     }
 }
